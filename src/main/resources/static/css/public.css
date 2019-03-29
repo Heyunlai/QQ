@@ -1,0 +1,58 @@
+.dialog{
+    width: 250px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-top: -40px;
+    margin-left: -125px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(79, 191, 255, 0.8);
+    font-size: 14px;
+    color: #ff4946;
+    animation:am 1.5s;
+    z-index:9999;
+}
+@keyframes am {
+    10%{background-color: rgba(255, 105, 98, 0.8);
+        width: 220px;
+        margin-left: -110px;
+        font-size: 13px;
+    }
+
+    20%{background-color: rgba(255, 105, 98, 0.8);
+        width: 200px;
+        margin-left: -100px;
+        font-size: 13px;
+    }
+    30%{background-color: rgba(79, 191, 255, 0.8);
+        width: 180px;
+        margin-left: -90px;
+        font-size: 12px;
+    }
+    40%{background-color: rgba(79, 191, 255, 0.8);
+        width: 160px;
+        margin-left: -80px;
+        font-size: 12px;
+    }
+    40%{background-color: rgba(79, 191, 255, 0.8);
+        width: 140px;
+        margin-left: -70px;
+        font-size: 10px;
+    }
+    60%{background-color: rgba(79, 191, 255, 0.8);
+        width: 130px;
+        margin-left: -70px;
+        font-size: 10px;
+    }
+    80%{background-color: rgba(79, 191, 255, 0.8);
+        width: 100px;
+        margin-left: -50px;
+        font-size: 9px;
+    }
+    100%{background-color: rgba(79, 191, 255, 0.8);
+        width: 60px;
+        font-size: 8px;}
+}

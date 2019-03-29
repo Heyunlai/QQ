@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/qq.ico">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/public.css">
+    <title>OO桌面</title>
+</head>
+<body>
+
+     <ul id="desktop">
+         <li class="left" name="game">
+             <img src="/images/game.ico" alt="" class="icon"><br>
+             <span>荣耀</span>
+         </li>
+         <li class="left" name="main">
+             <img src="/images/logo.png" alt="" class="icon"><br>
+             <span>OO</span>
+         </li>
+     </ul>
+     <div id="main">
+         <a href="/register" class="stop_p" id="register">注册账号</a>
+         <a href="#" id="ewm" class="stop_p"></a>
+         <div class="bg">
+             <div class="logo left">
+                 <li><img src="/images/qq_tools.png" alt="" class="stop_p" draggable="false"></li><span>QQ</span>
+             </div>
+            <ul class="clear">
+                <li class="exit stop_p" title="关闭">&times;</li>
+                <li class="min stop_p" title="最小化">&minus;</li>
+                <li class="setting stop_p" name="main" title="设置"></li>
+            </ul>
+         </div>
+         <div id="login" class="clear">
+             <div id="login_left" class="left">
+                 <img id="u_head" class="right stop_p" src="/images/head.jpg" draggable="false" alt="">
+             </div>
+             <div id="login_right" class="left">
+                 <form class="mg" action="/doLogin" method="post">
+                     <ul>
+                         <li>
+                             <input  autocomplete="off" class="txt txt_bg1 stop_p" type="text" name="userName" placeholder="OO号码/手机/邮箱">
+                             <span class="focus_border"></span>
+                         </li>
+                         <li>
+                             <input autocomplete="off" class="txt txt_bg2 stop_p" type="password" name="password" placeholder="密码">
+
+                             <span class="focus_border"></span>
+                         </li>
+                         <li class="height1 stop_p">
+                             <span>自动登录</span>
+                             <span>记住密码</span>
+                             <a class="hover1" target="_blank" href="https://www.qq.com">找回密码</a>
+                         </li>
+                         <li><input id="btn" class="stop_p" type="submit" value="登录"></li>
+                     </ul>
+                 </form>
+             </div>
+         </div>
+     </div>
+     <div id="main_back">
+         <div class="bg">
+             <div class="logo left">
+                 <li><img src="/images/qq_tools.png" alt="" draggable="false"></li><span>QQ</span>
+             </div>
+             <ul class="clear">
+                 <li class="exit stop_p" title="关闭">&times;</li>
+                 <li class="min stop_p" title="最小化">&minus;</li>
+                 <li class="setting stop_p" name="back"title="返回"></li>
+             </ul>
+         </div>
+     </div>
+     <div id="set"></div>
+     <div id="job">
+         <div id="win"></div>
+         <div id="job_main"></div>
+     </div>
+     <script src="/js/jquery.js"></script>
+     <script src="/js/login.js"></script>
+     <div th:if="${msg != null}" class="dialog">
+         <span th:text="${msg}"></span>
+         <script>
+             $('#main').show();
+             setTimeout(function () {
+                 $('.dialog').fadeOut();
+             },1100);
+         </script>
+     </div>
+</body>
+</html>

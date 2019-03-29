@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="shortcut icon" href="/images/qq.ico">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/public.css">
+    <title>OO注册</title>
+</head>
+<body>
+<div th:if="${msg != null}" class="dialog">
+    <span th:text="${msg}"></span>
+    <script>
+            setTimeout(function () {
+                $('.dialog').fadeOut();
+            },1100);
+    </script>
+</div>
+ <form class="mg" action="/doRegister" method="post" enctype="multipart/form-data">
+    <ul id="register_url">
+        <li class="font1 mg1">欢迎注册OO</li>
+        <li class="font2 left">每一天，乐在沟通！！</li>
+        <li class="right mg2"><a id="free_num" href="#">免费靓号</a></li>
+        <li class="clear mg3">
+            <input class="txt" id="input1" type="text" name="userName" placeholder="昵称">
+        </li>
+        <li class="mg1">
+            <input class="txt" type="password" name="password" placeholder="密码">
+        </li>
+        <li class="mg1">
+            <input accept=".jpg,.gif,.png" type="file" id="faceFile" name="faceFile">
+            <img class="face" id="face" src="/images/face.jpg" alt="头像" title="快点我呀！">
+        </li>
+        <li class="mg1">
+            <input id="btn" type="submit" value="注册玩耍">
+        </li>
+    </ul>
+ </form>
+</body>
+<script src="/js/jquery.js"></script>
+<script src="" th:src="@{/js/register.js}"></script>
+</html>
